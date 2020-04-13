@@ -1,6 +1,6 @@
 # 文档服务
 
-> 使用`Docker`+`Gitlab`+`Docsify`搭建文档服务
+> 使用`Docker`+`Docsify`搭建文档服务
 
 ## Docker环境配置
 
