@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  nodejs-docsify:
+    image: my-docsify
+    build:
+      context: .
+    container_name: nodejs-docsify
+    hostname: docsify
+    ports:
+      - 80:3000
+    volumes:
+      - ./docs:/srv/docsify/docs
+    #restart: always
+    environment:
+      - TZ=Asia/Shanghai
