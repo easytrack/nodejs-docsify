@@ -30,7 +30,7 @@
 >
 > [跳转功能背景](#功能背景)
 >
-> [跳转应用信息设计](RGP-MESSAGE/02.design-document/application_information_design.md)
+> [跳转应用信息设计](document/02.design-document/application_information_design.md)
 
 ## 术语
 
@@ -60,7 +60,7 @@
 >
 > [跳转功能背景](#功能背景)
 >
-> [跳转应用信息设计](RGP-MESSAGE/02.design-document/application_information_design.md)
+> [跳转应用信息设计](document/02.design-document/application_information_design.md)
 
 ## 功能背景
 
@@ -90,4 +90,4 @@
 >
 > [跳转功能背景](#功能背景)
 >
-> [跳转应用信息设计](RGP-MESSAGE/02.design-document/application_information_design.md)
+> [跳转应用信息设计](document/02.design-document/application_information_design.md)

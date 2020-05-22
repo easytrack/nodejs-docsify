@@ -81,29 +81,29 @@
 
   文档主体在`doc`目录下，每个项目单独一个目录。例如:
 
-  消息队列的项目文档放在`src/RGP-MESSAGE`下，图片文件放在`src/RGP-MESSAGE/images`目录下
+  消息队列的项目文档放在`src/document`下，图片文件放在`src/document/images`目录下
 
 - 文档目录(侧边栏)
 
   文档目录在`docs/项目目录/_sidebar.md`文件中，每个项目有单独的文档目录
 
-  例如:消息队列的文档目录在`docs/RGP-MESSAGE/_sidebar.md`中，内容如下
+  例如:消息队列的文档目录在`docs/document/_sidebar.md`中，内容如下
 
   ```reStructuredText
   - 产品介绍
-    - [背景](RGP-MESSAGE/01.introduction/background.md)
+    - [背景](document/01.introduction/background.md)
   
   - 产品设计文档
-    - [应用信息设计](RGP-MESSAGE/02.design-document/application_information_design.md)
+    - [应用信息设计](document/02.design-document/application_information_design.md)
   
   - 用户使用手册
-    - [用户指南](RGP-MESSAGE/03.user-guide/user-guide.md)
+    - [用户指南](document/03.user-guide/user-guide.md)
   
   - 运维手册
-    - [监控报警事项](RGP-MESSAGE/04.devops-guide/monitor_alarm.md)
+    - [监控报警事项](document/04.devops-guide/monitor_alarm.md)
   
   - OKR
-    - [OKR 目标](RGP-MESSAGE/05.okr-summary/okr.md)
+    - [OKR 目标](document/05.okr-summary/okr.md)
   ```
 
 ## 开发方式
@@ -127,7 +127,7 @@
   不同文件间的跳转必须加上完整的项目路径，跳转到具体的标题锚点应该使用渲染后的锚点`ID`，如
 
   ```reStructuredText
-  [跳转应用信息设计](RGP-MESSAGE/02.design-document/application_information_design.md)
+  [跳转应用信息设计](document/02.design-document/application_information_design.md)
   ```
 
 ## 文档服务效果图
