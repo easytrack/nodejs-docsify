@@ -12,7 +12,7 @@
 
 1. [登陆阿里云并卸载云盾](https://swas.console.aliyun.com/?spm=5176.161059.835498.2.7c097fdaO9vlV4#/server/43ba82d115c04e3480fc1fa43433a76d/cn-hongkong/dashboard)
 
-```sh
+```shell
 卸载阿里云盾
 远程连接到阿里云云服务器或者轻量应用服务器后，执行以下代码卸载阿里云盾：
 
@@ -116,7 +116,7 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 安装步骤：
 1、选择数字：2
 2、选择数字：13
-   ```
+```
 
 
 
@@ -155,7 +155,7 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 3. 下载compose
 
-   ```
+   ```shell
    #运行以下命令以下载 Docker Compose 的当前稳定版本
    curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
    

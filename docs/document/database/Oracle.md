@@ -139,7 +139,7 @@ directory=data_dir dumpfile=expdp.dmp logfile=impdp.log
 
 导出：
 
-```sh
+```shell
 expdp user/pwd@orcl schemas=user1 directory=directory_name dumpfile=xxxx.dmp logfile=xxx.log
 
 例如expdp hisense_lixupeng/hisense_lixupeng@orcl schemas=hisense_lxp directory=dpdata2 dumpfile=hisense_zy.dmp logfile=hisense_zy.log;
