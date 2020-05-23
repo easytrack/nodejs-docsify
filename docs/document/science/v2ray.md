@@ -259,7 +259,7 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 ## 七、证书
 
-```sh
+```shell
 证书生成：
 TLS 是证书认证机制，所以使用 TLS 需要证书，证书也有免费付费的，同样的这里使用免费证书，证书认证机构为 Let's 
 Encrypt。
