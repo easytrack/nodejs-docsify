@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
@@ -19,16 +19,6 @@
 			  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" title="dark" disabled>
 			  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" title="buble" disabled>
 			  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css" title="pure" disabled>
-	      <style>
-				  .demo-theme-preview a {
-				    padding-right: 10px;
-				  }
-
-				  .demo-theme-preview a:hover {
-				    cursor: pointer;
-				    text-decoration: underline;
-	  			}
-			</style>
     </head>
 
     <body>
@@ -103,6 +93,18 @@
                 search: 'auto',
                 coverpage: true,
                 onlyCover: true,
+                pagination: {
+			    				previousText: '上一章节',
+			   					nextText: '下一章节',
+			    				crossChapter: true,
+			    				crossChapterText: true,
+  							},
+  							count:{
+    							countable:true,
+    							fontsize:'0.9em',
+    							color:'rgb(90,90,90)',
+    							language:'chinese'
+  							},
               	darklightTheme: {
         					bodyFontSize : '15px',
       					},
@@ -147,6 +149,9 @@
         <script src="//unpkg.com/prismjs/components/prism-scala.min.js"></script>
         <script src="//unpkg.com/prismjs/components/prism-sql.min.js"></script>
         <script src="//unpkg.com/prismjs/components/prism-properties.min.js"></script>
+        
+        <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+        <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 				<script>
 				  var preview =Docsify.dom.find('.demo-theme-preview');
 				  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
