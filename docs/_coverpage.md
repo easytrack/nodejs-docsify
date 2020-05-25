@@ -13,7 +13,7 @@
 [故障植入](#docsify)
 [流量控制](#docsify)
 <br/>
-[影子体系](#docsify)
+[接口文档](document/interface/getUserById.md)
 [日志采集](#docsify)
 <br/>
 
