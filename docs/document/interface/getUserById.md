@@ -3,7 +3,7 @@
 > 总路径：/mobile/v1_0/user
 
 - 地址：`/getUserById`
-- 演示地址：[localhost:9000//mobile/v1_0/user/getUserById?uid=0001](localhost:9000//mobile/v1_0/user/getUserById?uid=0001)
+- 演示地址：[http://localhost:9000/mobile/v1_0/user/getUserById?uid=0001](http://localhost:9000/mobile/v1_0/user/getUserById?uid=0001)
 - 请求方式：`GET`
 - 请求参数
 
