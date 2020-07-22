@@ -36,12 +36,15 @@ SELECT * from  (select segment_name, MAX(BYTES/1024/1024) as memory_M from dba_s
 
 - 删除用户：drop user XXXX cascade;
 
-- 删除备份备份目录:`drop directory kmdata_exp ;`
+- 删除备份备份目录:`drop directory BACKUP;`
 
 - 新建备份目录：
 
   ```sql
-  create or replace directory kmdata_exp as '/u01/app/oracle/backup ';
+  create or replace directory BACKUP as '/u01/app/oracle/backup ';
+  grant read,write on directory BACKUP to public ;
+  #chown -R oracle:oinstall /home/oracle/backup
+  #chown -R oracle:oracle /home/oracle/backup
   ```
   
 
@@ -120,7 +123,7 @@ impdp adm_liaoguohua/adm_liaoguohua schemas=adm_liaoguohua directory= dpdata2 du
 表空间要求相同，用户名不同，同一台服务器就可以测试
 
 ```sql
-impdp adm_cs/adm_cs schemas=adm_cs remap_schema=adm_liaoguohua:adm_cs directory=dpdata2 dumpfile=adm_liaoguohua.dmp logfile=impdp.log;
+impdp adm_cs/adm_cs remap_schema=adm_liaoguohua:adm_cs directory=dpdata2 dumpfile=adm_liaoguohua.dmp logfile=impdp.log;
 ```
 
 备份和恢复，表空间不同，且用户名也不同(目前各项目推荐用这种)
@@ -263,5 +266,40 @@ expdp SYSTEM/easytrack@XE schemas=hisense directory=mydumpfile dumpfile=test.dmp
 
 
 
+```
+
+## 11、产品还原案例
+
+```mysql
+select * from dba_directories;
+SELECT * FROM dba_data_files t;
+create directory BACKUP as '/home/oracle/backup';
+
+grant read,write on directory BACKUP to public ;
+#chown -R oracle:oinstall /home/oracle/backup
+chown -R oracle:oracle /home/oracle/backup
+select * from dba_users;
+
+create temporary tablespace easytrack_temp 
+tempfile '/u01/app/oracle/oradata/xe/easytrack_temp.dbf' 
+size 50m 
+autoextend on 
+next 50m maxsize 20480m 
+extent management local; 
+
+create tablespace easytrack 
+logging 
+datafile '/u01/app/oracle/oradata/xe/easytrack.dbf' 
+size 50m 
+autoextend on 
+next 50m maxsize 20480m 
+extent management local;
+
+create user ppm10_lxp identified by ppm10_lxp 
+default tablespace easytrack 
+temporary tablespace easytrack_temp;
+
+grant connect,resource,dba to ppm10_lxp;
+impdp ppm10_lxp/ppm10_lxp remap_tablespace=ETPPM:easytrack remap_schema=etppm:ppm10_lxp directory=BACKUP dumpfile=ET10_v2.3_oracle_67931.DMP logfile=ET10_v2.3_oracle_67931.log;
 ```
 
